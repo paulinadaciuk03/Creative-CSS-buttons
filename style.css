@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    background-color: rgb(46, 46, 46);
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #ff6969;
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+}
+
+.navbar__title{
+    color: #ff6969;
+    margin: 0 10px;
+}
+
+.navbar__p{
+    color: white;
+}
+
+.container{
+    padding: 200px 20%;
+    width: 90%;
+}
+
+.buttons_container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 100px;
+}
+
+.first_button {
+    text-decoration: none;
+    color: antiquewhite;
+    border: 1px solid antiquewhite;
+    padding: 2rem 5rem;
+    position: relative;
+    overflow: hidden;
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+    text-align: center; 
+    white-space: nowrap;
+    transition: all 1s;
+}
+
+.first_button::before {
+    content: "DOWNLOAD";
+    font-weight: bold;
+    color: black;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: antiquewhite;
+    transform: translateY(-100%);
+    transition: all 1s;
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+    text-align: center; 
+    white-space: nowrap;
+}
+
+.first_button:hover::before {
+    transform: translateY(0);
+}
+
+.second_button{
+    text-decoration: none;
+    color: white;
+    padding: 2rem 5rem;
+    position: relative;
+    overflow: hidden;
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+    text-align: center; 
+    white-space: nowrap;
+    background-color: blueviolet;
+}
+
+.second_button::before{
+    content: "DOWNLOAD";
+    font-weight: bold;
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(87, 13, 156);
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+    text-align: center; 
+    white-space: nowrap;
+    transform: rotateX(270deg);
+    transform-origin: top;
+    transition: all 0.5s;
+}
+
+.second_button::after{
+    content: "DOWNLOAD";
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(68, 10, 122);
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+    text-align: center; 
+    white-space: nowrap;
+    transform: rotateX(270deg);
+    transform-origin: top;
+    transition: all 0.5s;
+    transition-delay: 0.25s;
+}
+
+.second_button:hover:before,
+.second_button:hover:after{
+    transform: rotateX(0);
+}
+
+.third_button{
+    text-decoration: none;
+    text-transform: uppercase;
+    background: transparent;
+    font-weight: bold;
+    padding: 2rem 5rem;
+    position: relative;
+    overflow: hidden;
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+    text-align: center; 
+    white-space: nowrap;
+    transition: all 0.2s;
+    color: white;
+    z-index: 1;
+}
+
+.third_button::before{
+    content: "";
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    mix-blend-mode: multiply;
+    background: #86c988a4;
+    transition: all 0.2s;
+    transform-origin: top;
+}
+
+.third_button::after{
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 100%;
+    height: 100%;
+    background: #ffff00a6;
+    z-index: -1;
+    mix-blend-mode: multiply;
+    transition: all 0.2s;
+    transform-origin: bottom;
+}
+
+.third_button:hover::before{
+    top: -7px;
+    left: 0;
+    transform: perspective(1000px) rotateX(75deg);
+}
+
+.third_button:hover::after{
+    top: 7px;
+    left: 0;
+    transform: perspective(1000px) rotateX(-75deg);
+}
+
